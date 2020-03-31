@@ -1,0 +1,22 @@
+.user {
+    font-family: "Roboto", sans-serif;
+    padding: .5rem;
+    display: flex;
+    position: relative;
+    &:not(:last-child) {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: .5rem;
+    }
+    strong {
+        font-size: 0.95rem;
+        color: #007bff;
+        margin: auto;
+    }
+    .fa-sign-out-alt {
+        cursor: pointer;
+        margin: auto 0;
+        position: absolute;
+        right: 0;
+        top: 24px;
+    }
+}

@@ -1,0 +1,31 @@
+.message-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    &.self {
+        flex-direction: row-reverse;
+        .message-container__message {
+            background: #435f7a;
+            color: #f5f5f5;
+        }
+    }
+    &__message {
+        display: flex;
+        align-items: center;
+        overflow-wrap: break-word;
+        padding: 10px 15px;
+        border-radius: 20px;
+        max-width: 70%;
+        line-height: 130%;
+        background: #f5f5f5;
+        color: #32465a;
+        float: left;
+
+        &__date {
+            font-size: 12px;
+            align-self: flex-end;
+            margin-left: 30px;
+        }
+    }
+}

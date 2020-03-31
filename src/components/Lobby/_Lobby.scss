@@ -1,0 +1,17 @@
+.lobby {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    > * {
+        width: 400px;
+    }
+    .error-message {
+        height: 19px;
+        width: 100%;
+        font-size: 80%;
+        color: #dc3545;
+        margin-bottom: 1rem;
+    }
+}

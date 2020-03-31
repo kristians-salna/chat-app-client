@@ -1,0 +1,1 @@
+export const lettersAndSpaces = new RegExp(/^([a-zA-Z]+(\s))*[a-zA-Z]+$/);

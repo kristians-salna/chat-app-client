@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import { withRouter } from 'react-router';
+import routes from './routes/routes';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ErrorBoundary>
+            {routes().map(
+                ({ path, exact, component: C, ...rest }) => (
+                    <Route
+                        key={path}
+                        path={path}
+                        exact={exact}
+                        render={props => (
+                            <C {...props} />
+                        )}
+                    />
+                )
+            )}
+        </ErrorBoundary>
+    );
 }
 
-export default App;
+export default withRouter(App);
